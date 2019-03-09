@@ -5,17 +5,26 @@
 	<title>Mars Klok</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="challenge2.css">
-	<script type="text/javascript" src="challenge2.js"></script>
 </head>
 <body>
 	<div class="grid-container">
 		<div class="grid-item-box1">
 			<header>
-				<h1>Tijd</h1>
+				<h1 class="titel">Tijd</h1>
 			</header>
 		</div>
 		<div class="grid-item-box2">
 			<div class="content-box1">
+				<div class="maan">
+					<img src="img/maan.png" class="maanfoto">
+				</div>
+				<div class="zon">
+					<img src="img/zon.png" class="zonfoto">
+				</div>
+			</div>
+		</div>
+		<div class="grid-item-box3">
+			<div class="content-box2">
 				<div id="tijd"></div><br>
 				<div id="klok">
 				  <div class="num num1"><div>1</div></div>
@@ -37,5 +46,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script type="text/javascript" src="challenge2.js"></script>
 </body>
 </html>
