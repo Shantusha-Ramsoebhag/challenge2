@@ -33,6 +33,7 @@ var tl = new TimelineMax();
 //tl.from(".maanfoto", 2, {y:200, opacity:0, scale:0, ease:Bounce.easeOut});
 tl.from(".titel", 3, {x:300, ease:Bounce.easeOut})
   .from("#message", 3, {x:-300, ease:Bounce.easeOut}, "-=0,5")
+  //.from("#message", 3, {x:-300, ease:Bounce.easeOut}, "-=0,5")
   .from("#klok", 3, {y:250, opacity:0, scale:0, ease:Bounce.easeOut}, "-=1.5");
   
 //Om de zon en maan op het juiste moment van de dag op te laten komen maak ik funtion met een if-statement.
@@ -56,12 +57,15 @@ let minutes = dt.getMinutes();
 
 if (hour>=12 && hour<=17){
   document.getElementById("message").innerHTML = "Good afternoon";
+  document.getElementById("img2").src = "img/zon.png";
 }
 else if (hour >=17 && hour<=20){
   document.getElementById("message").innerHTML = "Good evening";
+  document.getElementById("img").src = "img/maan.png";
 }
 else if (hour >=20 || hour<=6){
   document.getElementById("message").innerHTML = "Good night";
+  document.getElementById("img").src = "img/maan.png";
 }
 else{
   document.getElementById("message").innerHTML = "Good morning";
