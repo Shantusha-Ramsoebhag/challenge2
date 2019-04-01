@@ -1,3 +1,4 @@
+/*Google font zelfde als bij challenge1, consistentie*/
 @import url('https://fonts.googleapis.com/css?family=Rajdhani');
 *{
 	margin: 0px;
@@ -5,6 +6,7 @@
 	font-family: "Rajdhani", sans-serif;
 	}
 
+/*Objecten komen onder elkaar*/
 .grid-container{
 	display: grid;
 	grid-template-columns: 1fr;
@@ -19,14 +21,20 @@
 	margin-top: 15px;
 	}
 
-.zon, .maan{
+.maan{
 	width:50px;
 	height:50px;
+	}
+
+.zon{
+	width:60px;
+	height:60px;
 	}
 
 .maan{
 	margin-left: 10px;
 	}
+
 /*position relative om de zon en de maan met tweenmax te kunnen animeren.*/
 #img{
 	position: relative;
@@ -42,7 +50,7 @@
 	}
 
 body{
-	background-image: url("img/background.png");
+	background-image: url("../img/background.png");
 	background-size:cover;
 	min-height: 700px;
 	}
@@ -74,6 +82,7 @@ header{
 	margin-top: 25px;
 	}
 
+/*Tekst passend bij de tijd moet gecentreerd.*/
 #datum, #message{
 	text-align: center;
 	}
@@ -83,13 +92,13 @@ header{
 	border-radius: 10px;
 	box-shadow: 5px 10px 8px #888888;
 	margin-bottom: 15px;
-}
+	}
 
-
+/*Hover state bij message*/
 #message:hover {
   opacity: 0.5;
   filter: alpha(opacity=100); /* For IE8 and earlier */
-}
+	}	
 
 /*Groote van de klok kan met deze code gewijzigd worden.*/
 :root{
@@ -254,20 +263,21 @@ header{
 @media only screen and (min-width: 361px){
 	
 	body{
-		background-image: url("img/background_tablet.png");
-	}
+		background-image: url("../img/background_tablet.png");
+		}
 
+	/*Plek van img verder weg*/
 	#img2{
 		left: 620px;
-	}
+		}
 
 	.maan{
 		margin-left: 15px;
-	}
+		}
 
 	.content-box2{
 		margin-top: 15px;
-	}
+		}
 }
 
 
@@ -276,37 +286,37 @@ header{
 @media only screen and (min-width: 766px){
 		
 	body{
-		background-image: url("img/background_desktop.png");
-	}
+		background-image: url("../img/background_desktop.png");
+		}
 	
 	#img2{
 		left: 1220px;
-	}
+		}
 
 	.maan{
 		margin-left: 20px;
-	}
-
+		}
+	/*Klok mag groter*/
 	:root{
   	--size: 220px;
-	}
+		}
 
 	.content-box2{
 		margin-top: -35px;
-	}
+		}
 }
 
 /*Hier komt de code voor desktop groot resolutie */
 @media only screen and (min-width: 1367px){
 	body{
-		background-image: url("img/background_desktopgroot.png");
-	}
+		background-image: url("../img/background_desktopgroot.png");
+		}
 
 	#img2{
 		left: 1720px;
-	}
+		}
 
 	.maan{
 		margin-left: 40px;
-	}
+		}	
 }
